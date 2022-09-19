@@ -1,8 +1,12 @@
 // var sixBtns = document.querySelectorAll(".fix-num");
 
-var randomNumbers = document.querySelectorAll(".btn")
+var randomNumbers = document.querySelectorAll(".btn");
 var result = document.querySelector(".result");
-var numbers = document.querySelectorAll(".numbers")
+var numbers = document.querySelectorAll(".numbers");
+var reset = document.querySelector(".reset");
+var playGame = document.querySelector(".play");
+
+
 
 var btn1 = document.querySelector(".fix-num1");
 var btn2 = document.querySelector(".fix-num2");
@@ -33,7 +37,7 @@ btn6.innerHTML = 10;
 var counter = 0;
 
 function play(){
-    for( y of randomNumbers){
+    for(y of randomNumbers){
     y.innerHTML = parseInt(Math.random()*37)
     if(y.innerHTML == btn1.innerHTML || y.innerHTML == btn2.innerHTML || y.innerHTML == btn3.innerHTML 
         || y.innerHTML == btn4.innerHTML || y.innerHTML == btn5.innerHTML || y.innerHTML == btn6.innerHTML){
@@ -45,12 +49,10 @@ function play(){
     if(counter == 6){
         result.innerHTML = "CONGRATULATIONS!!! <br> You win Jackpot - 1,000,000.00$ <br> You guessed "+counter+" number";
                 result.style.color = "green"
-
     }
     else if (counter>=5 && counter <6){
         result.innerHTML = "CONGRATULATIONS!!! <br> You win - 100,000.00$ <br> You guessed "+counter+" number";
                 result.style.color = "green"
-
     }
     else if (counter>=4 && counter <5){
         result.innerHTML = "CONGRATULATIONS!!! <br> You win - 50,000.00$ <br> You guessed "+counter+" number";
@@ -60,16 +62,45 @@ function play(){
     else if (counter>=3 && counter <4){
         result.innerHTML = "CONGRATULATIONS!!! <br> You win - 1,000.00$ <br> You guessed "+counter+" number";
                 result.style.color = "green"
-
     }
     else {
         result.innerHTML = "You lose :( You guessed "+counter+" number";
         result.style.color = "red"
     }
-
     // result.innerHTML = "You guessed "+counter+" number";
     // console.log(counter)
-}}
+    document.querySelector(".play").disabled = true;
+
+}
+}
+
+
+reset.addEventListener("click",function(){
+document.querySelector(".play").disabled = false;
+ 
+
+
+    for( r of randomNumbers){
+    r.innerHTML = "";
+    r.style.backgroundColor = "";
+    r.style.color = "black"
+    randomNumbers.innerHTML = "";
+    result.innerHTML = "";
+
+
+
+    // console.log("kakhi")
+    // randomNumbers.style.color = "blue";
+
+}
+counter=0;
+
+
+
+
+})
+
+
 
 // for(var x of randomNumbers){
    

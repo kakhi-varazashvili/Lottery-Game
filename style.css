@@ -32,7 +32,7 @@
     margin-top: 100px;
 }
 
-.play {
+.play, .reset {
     display: block;
 
     margin: 50px auto;
