@@ -6,7 +6,7 @@
 
 }
 .btn {
-    background-color: aqua;
+    /* background-color: aqua; */
     border-radius: 50%;
     padding: 25px;
     border: 1px solid black;
@@ -15,8 +15,8 @@
 .sub-container {
     display: flex;
     justify-content: center;
-    margin: 0 auto;
-    margin-top: 100px;
+    margin: 100px auto;
+   
 
 }
 .fix-num1, .fix-num2, .fix-num3, .fix-num4, .fix-num5, .fix-num6 {
@@ -26,6 +26,9 @@
     padding: 25px;
 }
 .main-container {
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 600px;
     margin-top: 100px;
 }
 
@@ -33,4 +36,26 @@
     display: block;
 
     margin: 50px auto;
+}
+.result {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.main-numbers {
+    
+    margin: 0 auto;
+    justify-content: center;
+    text-align: center;
+    max-width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.numbers {
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 5px;
 }
